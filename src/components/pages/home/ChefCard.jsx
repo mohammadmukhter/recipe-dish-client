@@ -1,19 +1,19 @@
 import React from "react";
 
-const ChefCard = () => {
+const ChefCard = ({ data }) => {
+  console.log(data);
+  const { id, name, imageUrl, likes, yearsOfExperience, recipes } = data;
   return (
-    <div className="card card-side bg-base-100 shadow-xl">
+    <div className="card card-side bg-base-100 shadow-xl h-72 w-96">
       <figure>
-        <img
-          src="/images/stock/photo-1635805737707-575885ab0820.jpg"
-          alt="Movie"
-        />
+        <img className="w-60 h-full" src={imageUrl} alt="Movie" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
+        <h2 className="card-title">{name}</h2>
+        <p>Experiences: {yearsOfExperience} Years</p>
+        <p>Recipes: {recipes.length}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Watch</button>
+          <button className="btn btn-primary">View Recipes</button>
         </div>
       </div>
     </div>
