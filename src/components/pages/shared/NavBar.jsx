@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import userImage from "../../../assets/user.jpg";
-import Banner from "./Banner";
 
 const NavBar = () => {
   return (
@@ -58,7 +57,6 @@ const NavBar = () => {
           <Link className="btn">Login</Link>
         </div>
       </div>
-      <Banner></Banner>
     </>
   );
 };
