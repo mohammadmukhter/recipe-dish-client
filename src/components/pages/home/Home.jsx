@@ -1,9 +1,10 @@
 import React from "react";
+import ChefSection from "./ChefSection";
 
 const Home = () => {
   return (
-    <div>
-      <h2>This is home page</h2>
+    <div className="py-12">
+      <ChefSection></ChefSection>
     </div>
   );
 };
