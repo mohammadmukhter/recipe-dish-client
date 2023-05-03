@@ -25,7 +25,7 @@ const Banner = () => {
                   unique combinations of flavors. Experience the magic of Indian
                   cooking at your fingertips.
                 </p>
-                <button className="btn btn-primary">Explore More</button>
+                <button className="btn bg-slate-900">Explore More</button>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Banner = () => {
                   Immerse yourself in the diverse and colorful world of Indian
                   cuisine. Uncover the secrets of
                 </p>
-                <button className="btn btn-primary">Explore more</button>
+                <button className="btn bg-slate-900">Explore more</button>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Banner = () => {
                   collection of authentic recipes. From spicy curries to savory
                   snacks
                 </p>
-                <button className="btn btn-primary">Explore more</button>
+                <button className="btn bg-slate-900 ">Explore more</button>
               </div>
             </div>
           </div>

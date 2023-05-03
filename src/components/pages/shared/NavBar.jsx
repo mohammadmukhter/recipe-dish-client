@@ -85,18 +85,28 @@ const NavBar = () => {
           {user ? (
             <>
               <div className="w-10 rounded-full me-2">
-                <img
-                  className="w-10 rounded-full hover:cursor-pointer"
-                  src={user?.photoURL}
-                  title={user?.displayName}
-                />
+                <div
+                  className="tooltip tooltip-bottom font-bold"
+                  data-tip={user?.displayName}
+                >
+                  <img
+                    className="w-10 rounded-full hover:cursor-pointer"
+                    src={user?.photoURL}
+                  />
+                </div>
               </div>
-              <button onClick={logOutBtnHandler} className="btn">
+              <button
+                onClick={logOutBtnHandler}
+                className="bg-slate-600 px-2 py-1 rounded text-white font-bold"
+              >
                 Log Out
               </button>
             </>
           ) : (
-            <Link to="/login" className="btn">
+            <Link
+              to="/login"
+              className="bg-slate-600 px-2 py-1 rounded text-white font-bold"
+            >
               Login
             </Link>
           )}
