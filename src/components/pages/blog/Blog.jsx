@@ -1,12 +1,44 @@
 import React from "react";
+import ReactToPdf from "react-to-pdf";
+
+const ref = React.createRef();
+
+const options = {
+  orientation: "portrait",
+  unit: "in",
+  format: [16.4, 11.7],
+};
 
 const Blog = () => {
   return (
-    <div className="my-6">
-      <h2 className="text-3xl font-semibold text-center my-4">
-        Some web development concepts
-      </h2>
-      <div className="space-y-3">
+    <div className="mb-8">
+      <div className="grid grid-cols-[1fr_2fr_1fr] items-center bg-gray-300 mb-4">
+        <div></div>
+        <h2 className="text-3xl font-semibold text-center my-4">
+          Some web development concepts{" "}
+        </h2>
+        <div className="ms-auto mr-2">
+          <ReactToPdf
+            targetRef={ref}
+            filename="div-blue.pdf"
+            options={options}
+            x={0.5}
+            y={0.5}
+            scale={0.8}
+          >
+            {({ toPdf }) => (
+              <button
+                className="bg-gray-800 text-white px-2 py-1 rounded"
+                onClick={toPdf}
+              >
+                Generate pdf
+              </button>
+            )}
+          </ReactToPdf>
+        </div>
+      </div>
+
+      <div className="space-y-3" ref={ref}>
         <div className="bg-gray-100 text-black p-4 rounded">
           <span className="bg-gray-300 text-black font-medium text-xl underline">
             The differences between uncontrolled and controlled components:
