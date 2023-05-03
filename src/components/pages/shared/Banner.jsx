@@ -40,7 +40,7 @@ const Banner = () => {
         </div>
         <div id="slide2" className="carousel-item relative w-full">
           <div
-            className="hero min-h-screen relative"
+            className="hero h-auto md:min-h-screen relative object-cover bg-no-repeat"
             style={{ backgroundImage: `url(${bannerImage2})` }}
           >
             <div className=" bg-opacity-60"></div>
