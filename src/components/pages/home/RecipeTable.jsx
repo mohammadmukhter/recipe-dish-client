@@ -1,13 +1,24 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import React from "react";
+import { toast } from "react-toastify";
 
 const RecipeTable = ({ recipes }) => {
   let i = 1;
   console.log(recipes);
 
-  const favoriteHandler = (id) => {
-    console.log(id);
+  const favoriteHandler = (event, name) => {
+    event.currentTarget.disabled = true;
+    toast(`${name} added to favorite list`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
   return (
     <div>
@@ -60,8 +71,8 @@ const RecipeTable = ({ recipes }) => {
                   </td>
                   <td className="border border-slate-500 p-2">
                     <button
-                      onClick={() => favoriteHandler(data.recipeId)}
-                      className="btn btn-danger"
+                      onClick={(e) => favoriteHandler(e, data.name)}
+                      className="btn btn-danger disabled:bg-gray-200 disabled:text-gray-400"
                     >
                       Favorite
                     </button>
