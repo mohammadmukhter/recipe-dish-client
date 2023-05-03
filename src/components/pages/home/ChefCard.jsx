@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const { id, name, imageUrl, likes, yearsOfExperience, recipes } = data;
   return (
     <div className="card card-side bg-base-100 shadow-xl h-72 w-96">

@@ -54,7 +54,9 @@ const NavBar = () => {
           <div className="w-10 rounded-full">
             <img className="w-10 rounded-full" src={userImage} />
           </div>
-          <Link className="btn">Login</Link>
+          <Link to="/login" className="btn">
+            Login
+          </Link>
         </div>
       </div>
     </>
