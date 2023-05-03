@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImage from "../../../assets/login.jpg";
 import { AuthContext } from "../../../provider/AuthProvider";
@@ -9,7 +10,7 @@ const Login = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state.from.pathname || "/";
+  const from = location.state?.from?.pathname || "/";
 
   console.log(location);
   const formHandler = (event) => {
@@ -113,7 +114,7 @@ const Login = () => {
                 onClick={googleBtnHandler}
                 className="btn btn-[#292524] hover:btn-[#0e0000"
               >
-                Login with Google
+                <FaGoogle className="mr-2"></FaGoogle>Login with Google
               </button>
             </div>
             <div className="form-control">
@@ -121,7 +122,7 @@ const Login = () => {
                 onClick={githubBtnHandler}
                 className="btn btn-[#292524] hover:btn-[#0e0000"
               >
-                Login with Github
+                <FaGithub className="mr-2"></FaGithub>Login with Github
               </button>
             </div>
             <div className="form-control">

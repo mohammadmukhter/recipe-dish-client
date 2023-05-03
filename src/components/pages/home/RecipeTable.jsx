@@ -1,3 +1,5 @@
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 import React from "react";
 
 const RecipeTable = ({ recipes }) => {
@@ -44,7 +46,18 @@ const RecipeTable = ({ recipes }) => {
                   <td className="border border-slate-500 p-2">
                     {data.cookingMethod}
                   </td>
-                  <td className="border border-slate-500 p-2">{data.rating}</td>
+                  <td className="border border-slate-500 p-2">
+                    {data.rating}
+                    <div>
+                      <div style={{ maxWidth: 180, width: "100%" }}>
+                        <Rating
+                          readOnly
+                          value={data.rating}
+                          key={data.rating}
+                        />
+                      </div>
+                    </div>
+                  </td>
                   <td className="border border-slate-500 p-2">
                     <button
                       onClick={() => favoriteHandler(data.recipeId)}
