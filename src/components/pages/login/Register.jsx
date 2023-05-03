@@ -156,7 +156,7 @@ const Register = () => {
             Please Register
           </h1>
           <img
-            className="w-3/4 h-3/4 mx-auto"
+            className="w-4/5 h-3/4 mx-auto"
             src={registerImage}
             alt="registerImage"
           />

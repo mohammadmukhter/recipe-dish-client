@@ -66,6 +66,7 @@ const Login = () => {
           progress: undefined,
           theme: "light",
         });
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         const errorMessage = err.message;
@@ -86,6 +87,7 @@ const Login = () => {
         progress: undefined,
         theme: "light",
       });
+      navigate(from, { replace: true });
     });
   };
 
