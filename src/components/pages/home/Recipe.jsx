@@ -2,6 +2,8 @@ import React from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import RecipeTable from "./RecipeTable";
 
+import { FaThumbsUp } from "react-icons/fa";
+
 const Recipe = () => {
   const navigate = useNavigate();
   const loaderData = useLoaderData();
@@ -17,7 +19,7 @@ const Recipe = () => {
   }
   return (
     <div>
-      <div className="hero  bg-base-200">
+      <div className="hero bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src={imageUrl}
@@ -32,7 +34,9 @@ const Recipe = () => {
                 <p>Experiences: {yearsOfExperience} years</p>
               </div>
               <div>
-                <p>Likes: {likes}</p>
+                <p>
+                  <FaThumbsUp className="inline" /> {likes}
+                </p>
               </div>
             </div>
           </div>

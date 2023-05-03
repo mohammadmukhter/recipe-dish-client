@@ -76,7 +76,6 @@ const Register = () => {
                 type="text"
                 placeholder="User Name"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control">
@@ -88,7 +87,6 @@ const Register = () => {
                 type="email"
                 placeholder="email"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control">
@@ -100,7 +98,6 @@ const Register = () => {
                 type="text"
                 placeholder="Photo URL"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control">
@@ -112,7 +109,6 @@ const Register = () => {
                 type="password"
                 placeholder="password"
                 className="input input-bordered"
-                required
               />
               <label className="label">
                 <span className="label-text">Confirm Password</span>

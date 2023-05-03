@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavBar = () => {
@@ -36,10 +36,22 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gray-900 rounded-box w-52 z-30"
             >
               <li>
-                <Link>Home</Link>
-                <Link>Blog</Link>
-                <Link>About</Link>
-                <Link>Contact</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive && "text-red-600 bg-gray-900 font-bold"
+                  }
+                  to="/Home"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive && "text-red-600 bg-gray-900 font-bold"
+                  }
+                  to="/blog"
+                >
+                  Blog
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -50,10 +62,22 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link>Home</Link>
-              <Link>Blog</Link>
-              <Link>About</Link>
-              <Link>Contact</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive && "text-red-600 bg-gray-900 font-bold"
+                }
+                to="/Home"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive && "text-red-600 bg-gray-900 font-bold"
+                }
+                to="/blog"
+              >
+                Blog
+              </NavLink>
             </li>
           </ul>
         </div>

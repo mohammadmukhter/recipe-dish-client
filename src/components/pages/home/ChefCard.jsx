@@ -1,4 +1,5 @@
 import React from "react";
+import { FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ data }) => {
@@ -13,7 +14,9 @@ const ChefCard = ({ data }) => {
         <h2 className="card-title">{name}</h2>
         <p>Experiences: {yearsOfExperience} Years</p>
         <p>Recipes: {recipes.length}</p>
-        <p>Likes: {likes}</p>
+        <p>
+          <FaThumbsUp className="inline"></FaThumbsUp> {likes}
+        </p>
         <div className="card-actions justify-end">
           <Link
             to={`/recipe/${id}`}

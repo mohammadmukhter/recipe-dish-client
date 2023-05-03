@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImage from "../../../assets/login.jpg";
 import { AuthContext } from "../../../provider/AuthProvider";
 
@@ -7,7 +7,11 @@ const Login = () => {
   const [error, setError] = useState(null);
   const { loginHandler, googleHandler, githubHandler } =
     useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state.from.pathname || "/";
 
+  console.log(location);
   const formHandler = (event) => {
     event.preventDefault();
     setError(null);
@@ -29,6 +33,7 @@ const Login = () => {
           const loggedUser = res.user;
           console.log(loggedUser);
           form.reset();
+          navigate(from, { replace: true });
         })
         .catch((err) => setError("user not found"));
 
