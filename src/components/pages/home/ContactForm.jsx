@@ -113,7 +113,7 @@ const ContactForm = () => {
             shadow-md
             hover:bg-[#0e0d0d] hover:shadow-lg
             focus:bg-[#0e0d0d] focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-[#1b1919] active:shadow-lg
+            active:bg-[#0e0d0d] active:shadow-lg
             transition
             duration-150
             ease-in-out"
