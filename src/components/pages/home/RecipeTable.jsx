@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const RecipeTable = ({ recipes }) => {
   let i = 1;
-  console.log(recipes);
+  // console.log(recipes);
 
   const favoriteHandler = (event, name) => {
     event.currentTarget.disabled = true;
