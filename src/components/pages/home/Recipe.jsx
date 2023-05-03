@@ -11,7 +11,10 @@ const Recipe = () => {
     <div>
       <div className="hero  bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={imageUrl} className="w-60 h-auto rounded-lg shadow-2xl" />
+          <img
+            src={imageUrl}
+            className="w-60 h-72 object-cover rounded-lg shadow-2xl"
+          />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-6">{bio}</p>
