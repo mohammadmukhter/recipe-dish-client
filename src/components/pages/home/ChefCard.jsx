@@ -15,7 +15,10 @@ const ChefCard = ({ data }) => {
         <p>Recipes: {recipes.length}</p>
         <p>Likes: {likes}</p>
         <div className="card-actions justify-end">
-          <Link to={`/recipe/${id}`} className="btn btn-primary">
+          <Link
+            to={`/recipe/${id}`}
+            className="btn bg-[#292524] hover:bg-[#0e0d0d]"
+          >
             View Recipes
           </Link>
         </div>

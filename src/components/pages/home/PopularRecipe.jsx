@@ -18,7 +18,7 @@ const PopularRecipe = () => {
           <div className="card-body">
             <h2 className="card-title">
               Chicken tanduri
-              <div className="badge badge-secondary">popular</div>
+              <div className="badge badge-[#0e0d0d]">popular</div>
             </h2>
             <p>
               chicken Tanduri is most famous indian food . which is most
@@ -40,7 +40,7 @@ const PopularRecipe = () => {
           <div className="card-body">
             <h2 className="card-title">
               Hydrabadi biriyani
-              <div className="badge badge-secondary">popular</div>
+              <div className="badge badge-[#0e0d0d]">popular</div>
             </h2>
             <p>
               Hydrabadi biriyani another most food in whole indian as well as
@@ -58,7 +58,7 @@ const PopularRecipe = () => {
           <div className="card-body">
             <h2 className="card-title">
               Palak panir
-              <div className="badge badge-secondary">popular </div>
+              <div className="badge badge-[#0e0d0d]">popular </div>
             </h2>
             <p>
               Its mainly make with panir . its very delicious and healthy food.

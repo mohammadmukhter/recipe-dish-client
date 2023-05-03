@@ -1,12 +1,20 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import RecipeTable from "./RecipeTable";
 
 const Recipe = () => {
+  const navigate = useNavigate();
   const loaderData = useLoaderData();
   const { id, name, imageUrl, yearsOfExperience, bio, recipes, likes } =
     loaderData;
   console.log(loaderData);
+  if (!loaderData) {
+    return (
+      <div className="text-center text-red-700 font-bold text-3xl bg-white p-4">
+        No Data Found!
+      </div>
+    );
+  }
   return (
     <div>
       <div className="hero  bg-base-200">
@@ -20,7 +28,7 @@ const Recipe = () => {
             <p className="py-6">{bio}</p>
             <div className="flex items-center">
               <div className="flex-grow">
-                <p>Recipes: {recipes.length}</p>
+                <p>Recipes: {recipes?.length}</p>
                 <p>Experiences: {yearsOfExperience} years</p>
               </div>
               <div>

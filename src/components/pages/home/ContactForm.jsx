@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   return (
@@ -76,7 +77,7 @@ const ContactForm = () => {
               transition
               ease-in-out
               m-0
-              focus:text-gray-700 focus:bg-white focus:border-[#2925240 focus:outline-none
+              focus:text-gray-700 focus:bg-white focus:border-[#292524] focus:outline-none
             "
                   id="exampleFormControlTextarea13"
                   rows="3"
@@ -88,7 +89,6 @@ const ContactForm = () => {
                   type="checkbox"
                   class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-[#292524] checked:border-[#292524] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
                   id="exampleCheck87"
-                  checked
                 />
                 <label
                   class="form-check-label inline-block text-gray-800"
@@ -97,9 +97,9 @@ const ContactForm = () => {
                   Send me a copy of this message
                 </label>
               </div>
-              <button
-                type="submit"
-                class="
+              <Link>
+                <button
+                  class="
             w-full
             px-6
             py-2.5
@@ -113,13 +113,14 @@ const ContactForm = () => {
             shadow-md
             hover:bg-[#0e0d0d] hover:shadow-lg
             focus:bg-[#0e0d0d] focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-[#0e0d0d] active:shadow-lg
+            active:bg-[#1b1919] active:shadow-lg
             transition
             duration-150
             ease-in-out"
-              >
-                Send
-              </button>
+                >
+                  Send
+                </button>
+              </Link>
             </form>
           </div>
         </div>

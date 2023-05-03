@@ -5,7 +5,7 @@ import NavBar from "../pages/shared/NavBar";
 
 const Secondary = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto flex flex-col min-h-screen">
       <NavBar></NavBar>
       <Outlet></Outlet>
       <Footer></Footer>

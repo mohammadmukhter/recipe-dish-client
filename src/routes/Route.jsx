@@ -3,6 +3,7 @@ import Main from "../components/layouts/Main";
 import Secondary from "../components/layouts/Secondary";
 import Home from "../components/pages/home/Home";
 import Recipe from "../components/pages/home/Recipe";
+import NotFound from "../components/pages/shared/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound></NotFound>,
   },
 ]);
 
