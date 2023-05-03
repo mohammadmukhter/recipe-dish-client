@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import userImage from "../../../assets/user.jpg";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOutHandler } = useContext(AuthContext);
   return (
     <>
       <div className="navbar bg-stone-800 text-white px-5 sticky top-0 z-50">
