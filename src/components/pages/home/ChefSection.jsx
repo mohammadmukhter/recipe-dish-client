@@ -9,7 +9,9 @@ const ChefSection = () => {
 
   useEffect(() => {
     const dataFetcher = async () => {
-      const fetched = await fetch("http://localhost:5000/chef");
+      const fetched = await fetch(
+        "https://recipe-dish-server-mohammadmukhter.vercel.app/chef"
+      );
       const data = await fetched.json();
       setChefData(data.chefs);
       setLoader(false);

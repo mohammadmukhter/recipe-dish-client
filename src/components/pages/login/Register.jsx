@@ -1,6 +1,6 @@
 import { updateProfile } from "firebase/auth";
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import registerImage from "../../../assets/register.jpg";
 import { AuthContext } from "../../../provider/AuthProvider";
@@ -8,6 +8,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 const Register = () => {
   const [error, setError] = useState(null);
   const { registerHandler } = useContext(AuthContext);
+  const navigate = useNavigate();
   //   console.log(registerHandler);
 
   const formHandler = (event) => {
@@ -55,9 +56,12 @@ const Register = () => {
             theme: "light",
           });
           form.reset();
+          navigate("/");
           setError(null);
         })
-        .catch((err) => console.log(err));
+        .catch((err) =>
+          setError("user already Exist. Please Try another email address")
+        );
 
       // console.log(userName, photo);
     }
