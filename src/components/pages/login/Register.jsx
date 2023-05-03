@@ -1,6 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import registerImage from "../../../assets/register.jpg";
 import { AuthContext } from "../../../provider/AuthProvider";
 
@@ -43,7 +44,16 @@ const Register = () => {
         .then((res) => {
           const registeredUser = res.user;
           updateHandler(res.user, userName, photo);
-          console.log(registeredUser);
+          toast(`Register Successfully`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
           form.reset();
           setError(null);
         })

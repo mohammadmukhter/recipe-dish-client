@@ -9,7 +9,7 @@ const Recipe = () => {
   const loaderData = useLoaderData();
   const { id, name, imageUrl, yearsOfExperience, bio, recipes, likes } =
     loaderData;
-  console.log(loaderData);
+  // console.log(loaderData);
   if (!loaderData) {
     return (
       <div className="text-center text-red-700 font-bold text-3xl bg-white p-4">
@@ -25,6 +25,7 @@ const Recipe = () => {
             src={imageUrl}
             className="w-60 h-72 object-cover rounded-lg shadow-2xl"
           />
+
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-6">{bio}</p>

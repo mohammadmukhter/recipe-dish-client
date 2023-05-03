@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import loginImage from "../../../assets/login.jpg";
 import { AuthContext } from "../../../provider/AuthProvider";
 
@@ -32,7 +33,16 @@ const Login = () => {
       loginHandler(email, password)
         .then((res) => {
           const loggedUser = res.user;
-          console.log(loggedUser);
+          toast(`Login Successfully`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
           form.reset();
           navigate(from, { replace: true });
         })
@@ -46,7 +56,16 @@ const Login = () => {
     googleHandler()
       .then((res) => {
         const loggedUser = res.user;
-        console.log(loggedUser);
+        toast(`Login Successfully`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       })
       .catch((err) => {
         const errorMessage = err.message;
@@ -57,7 +76,16 @@ const Login = () => {
   const githubBtnHandler = () => {
     githubHandler().then((res) => {
       const loggedUser = res.user;
-      console.log(loggedUser);
+      toast(`Login Successfully`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     });
   };
 
