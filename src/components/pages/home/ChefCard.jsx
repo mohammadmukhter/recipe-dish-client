@@ -1,5 +1,6 @@
 import React from "react";
 import { FaThumbsUp } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ data }) => {
@@ -8,7 +9,9 @@ const ChefCard = ({ data }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl h-72 w-96">
       <figure>
-        <img className="w-60 h-full" src={imageUrl} alt="Movie" />
+        <LazyLoad width={240} threshold={0.95}>
+          <img className="w-60 h-full object-cover" src={imageUrl} alt="" />
+        </LazyLoad>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
