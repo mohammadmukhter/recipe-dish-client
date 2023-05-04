@@ -11,7 +11,7 @@ const PopularRecipe = () => {
       </h1>
 
       <div className="flex flex-col md:flex-row gap-4 justify-center ">
-        <div className="card mx-auto w-96 bg-base-100 shadow-xl">
+        <div className="card mx-auto w-full md:w-96 bg-base-100 shadow-xl px-2">
           <figure>
             <img className="w-full h-72" src={popular1} alt="chicken tanduri" />
           </figure>
@@ -29,7 +29,7 @@ const PopularRecipe = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+        <div className="card w-full md:w-96 mx-auto bg-base-100 shadow-xl px-2">
           <figure>
             <img
               className="w-full h-72"
@@ -51,7 +51,7 @@ const PopularRecipe = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+        <div className="card w-full md:w-96 mx-auto bg-base-100 shadow-xl px-2">
           <figure>
             <img className="w-full h-72" src={popular3} alt="Palak panir" />
           </figure>

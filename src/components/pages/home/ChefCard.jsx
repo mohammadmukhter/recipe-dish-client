@@ -7,7 +7,7 @@ const ChefCard = ({ data }) => {
   // console.log(data);
   const { id, name, imageUrl, likes, yearsOfExperience, recipes } = data;
   return (
-    <div className="card card-side bg-base-100 shadow-xl h-72 w-96">
+    <div className="card card-side bg-base-100 shadow-xl h-72 w-full md:w-96">
       <figure>
         <LazyLoad width={240} threshold={0.95}>
           <img className="w-60 h-full object-cover" src={imageUrl} alt="" />
